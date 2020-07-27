@@ -1,0 +1,13 @@
+#创建列表
+menber = ["金","木","水"]
+#单独添加元素
+menber.append("土")
+print(menber)
+#同时添加多个元素
+menber.extend(["土","土木"])
+print(menber)
+#规定元素添加的位置
+menber.insert(menber.index("土"),"金木水火土")
+print(menber)
+menber.insert(0,"金木水火土")
+print(menber)
