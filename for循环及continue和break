@@ -1,0 +1,6 @@
+for i in range(1,10):
+    if i//3 == 2:
+        print(i)
+        continue #结束当前循环并返回开始下一循环
+    i = i-10
+    print(i)
