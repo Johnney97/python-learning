@@ -1,0 +1,9 @@
+#字符串格式化
+#1.位置参
+a="{0} is my {1}".format("大宝","son")
+print(a)
+#2.标签参数
+b="{a1} is my {b1}".format(a1="大宝",b1="life")
+print(b)
+c="{a1} is my {b1}".format(a1="大宝",b1="love")
+print(c)
