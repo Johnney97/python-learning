@@ -1,0 +1,13 @@
+#自定义函数
+def fun1(a,b):
+    return (a+b)
+print(fun1(1,2))
+#默认参数
+def fun1(a=1,b=2):
+    return (a+b)
+print(fun1(b=4))
+#收集参数
+def fun1(*collection):
+    return (len(collection),collection[2])
+a=fun1(1,2,46,547)
+print(list(a))
