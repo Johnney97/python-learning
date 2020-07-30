@@ -1,0 +1,31 @@
+#闭包,最后返回值的函数不能加括号
+def fun1(x):
+    print("我是函数1")
+    def fun2(y):
+        return x+y
+    return fun2
+
+#lambda函数、filter和map
+b= lambda x: x/2
+b(2)
+
+#filter筛选BIF,取出0-9中的偶数
+def fun1(x):
+    return x%2-1
+a=list(filter(fun1,range(10)))
+print(a)
+
+#用lambda实现
+b=list(filter(lambda x:x%2-1,range(10)))
+print (b)
+
+#map,将范围内参数数值进行计算并返回值
+def fun2(x):
+    x+=1
+    return x+2
+c=list(map(fun2,range(10)))
+print(c)
+
+#用lambda实现
+d=list(map(lambda x : x+3,range(10)))
+print(d)
