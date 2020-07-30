@@ -1,0 +1,16 @@
+#作用于全局的为全局变量，作用于函数内部的为局部变量。全局变量屏蔽局部变量
+#折扣价计算函数
+def fun1(price,rate):
+    final_price = price * rate
+    #print("您输入的原价是：",old_price)
+    old_price = 50
+    print("输出原价",old_price)
+    return final_price
+
+#输入原价
+old_price = float(input("请输入原价："))
+#输入折扣
+rate = float((input("请输入折扣：")))
+#调用计算函数，输出折扣价
+new_price = fun1(old_price,rate)
+print("折扣价为：",new_price)
