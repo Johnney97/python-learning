@@ -1,0 +1,20 @@
+#求输入数字的阶乘
+#首先用循环方法
+def fun1(a):
+    for i in range(1,a):
+        a*=i
+    return a
+number=int(input("请输入一个人正整数："))
+result=fun1(number)
+print("%d 的阶乘是 %d" % (number,result))
+
+#再用递归实现，我调用我自个儿
+#求输入数字的阶乘
+def fun1(a):
+    if a==1:
+        return 1
+    else:
+        return a*fun1(a-1)
+number=int(input("请输入一个人正整数："))
+result=fun1(number)
+print("%d 的阶乘是 %d" % (number,result))
