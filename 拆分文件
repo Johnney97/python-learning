@@ -1,0 +1,39 @@
+#将文件内容拆分为三个文件
+
+#保存新文件
+def new_file(count,word):
+
+    file_name ="D://test"+str(count)+".txt"
+
+    file1=open(file_name,"w")
+
+    file1.writelines(word)
+
+    file1.close()
+
+#拆分文件
+def split_file(file_name):
+
+    word = []
+    
+    count=1
+
+    f=open(file_name)
+
+    for each in f:
+        
+        if each[:3] != "===":
+    
+            word.append(each)
+
+        else:
+            new_file(count,word)
+        
+            count += 1
+
+            word =[]
+        
+    new_file(count,word)
+
+    f.close()
+split_file("D://test.txt")
