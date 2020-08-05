@@ -1,0 +1,4 @@
+try:
+    int("ab")
+except ValueError as reason:
+    print("值类型出错啦,错误原因是："+str(reason))
