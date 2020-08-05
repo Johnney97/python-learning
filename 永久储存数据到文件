@@ -1,0 +1,16 @@
+#永久保存文件
+import pickle
+##要保存的内容
+my_list = ["我在学习","leaning",123]
+##创建文件，采用二进制写入格式（wb）
+pickle_file = open("D://my_list.pkl","wb")
+##将内容导入（dump）文件
+pickle.dump(my_list,pickle_file)
+pickle_file.close()
+
+#打开文件（）
+pickle_file = open("D://my_list.pkl","rb")
+##使用load工厂函数
+my_list2=pickle.load(pickle_file)
+print(my_list2)
+pickle_file.close()
