@@ -1,0 +1,22 @@
+#创建类Ball，大写字母开头,self为默认值
+class Ball:
+    def test(self,name):
+        self.name=name
+    def test1(self):
+        print("我是%s,快开门" %  self.name)
+
+#类的实例化
+a = Ball()
+a.test("大宝子")
+a.test1()
+
+#建立类AAA，通过__init__建立默认参数,
+class AAA:
+    def __init__(self,name):
+        self.name=name
+    def test1(self):
+        print("我是%s,快开门" %  self.name)
+
+#可直接调用对象,将实例化和传参合为1步。
+b=AAA("小宝子")
+b.test1()
