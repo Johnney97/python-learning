@@ -1,0 +1,31 @@
+#定义类Retangle
+class Retangle:
+    def __init__(self,width=0,height=0):
+        self.width = width
+        self.height = height
+        self.prompt = "请开始计算面积"
+        
+
+#将对象转化为string类型并返回
+#    def __repr__(self):
+#        return self.prompt
+
+#通过setattr方法判断是否为正方形
+    def __setattr__(self,name,value):
+        if name == "square":
+            self.width = value
+            self.height = value
+
+#通过继承基类（父类）避免递归陷阱
+        else:
+            super().__setattr__(name,value)
+
+#定义计算面积方法
+    def get_area(self):
+        self.area = self.width*self.height
+        self.prompt = "边长分别为%s、%s的矩形的面积是" % (self.width,self.height)
+        self.prompt = self.prompt + str(self.area)
+        return self.prompt
+        
+#对类里的各个方法进行封装
+    x = property(get_area)
