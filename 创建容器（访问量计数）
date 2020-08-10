@@ -1,0 +1,18 @@
+#创建不可变容器，访问量统计
+class Contain:
+#未知数量参数*args
+    def __init__(self,*args):
+#创建空字典
+        dict1 = {}
+        self.values = list(args)
+        
+#对空字典输入键和值，初始值（初始访问量）为0
+        self.count = dict1.fromkeys(self.values,0)
+
+    def __len__(self):
+        return len(self.values)
+        
+#建立访问返回，并计数
+    def __getitem__(self,key):
+        self.count[self.values[key]] +=1
+        return self.values[key]
