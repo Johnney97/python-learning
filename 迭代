@@ -1,0 +1,29 @@
+迭代，iter和next函数
+for i in "i am kuzma!":
+    print(i)
+print("1、用for循环实现遍历")
+
+#用迭代来实现
+str1 = "i am kuzma"
+len_str = len(str1)
+string = iter(str1)
+
+###
+while len_str:
+    each = next(string)
+    print(each)
+    len_str -= 1
+
+print("2、用while循环实现for循环")
+
+###
+str2 = "i am lebron"
+string_1 = iter(str2)
+
+while True:
+    try:
+        a = next(string_1)
+        print(a)
+    except StopIteration as reason:
+        print("遍历到头啦%s。3、用while循环和try except函数实现" % (str(reason)))
+        break
