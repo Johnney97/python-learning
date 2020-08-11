@@ -1,0 +1,12 @@
+#如果作为主程序运行则调用hi()，作为被调用模块则不调用hi()
+if __name__ == "__main__":
+    hi()
+
+#增加模块搜索路径
+import sys
+print(sys.path)
+sys.path.append("新的保存路径")
+
+#创建包，新建文件夹，在文件夹内增加 __init__.py 模块，模块可以为空，再放入相关模块，形成包
+import package.hello as ph
+ph.hi()
