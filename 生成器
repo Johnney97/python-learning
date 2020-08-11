@@ -1,0 +1,24 @@
+#生成器
+def myGen():
+    print("生成器被执行")
+    yield 1
+    yield 2
+
+#斐波那契数列函数
+def fibs(n=10):
+    a = 0
+    b = 1
+    
+    while True:
+        a,b = b,a+b
+        if a < n:
+#利用yield方法生成a            
+            yield a
+            
+#列表推导式
+list1 = [i for i in range(100) if i<10]
+print(list1)
+
+#字典推导式
+dict1 = {i:i % 2 == 0 for i in range(20)}
+print(dict1)
